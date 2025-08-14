@@ -209,7 +209,8 @@ class TestVisitorNavigation:
 
             # Verify we're back home
             home_url = main_page.get_current_url()
-            assert home_url == base_url, f"Logo didn't return home from {page_name}"
+            # Handle trailing slash differences
+            assert home_url.rstrip('/') == base_url.rstrip('/'), f"Logo didn't return home from {page_name}"
 
             home_content = main_page.browser.page_source
             assert "Find your new community today" in home_content, f"Home content missing after logo click from {page_name}"
