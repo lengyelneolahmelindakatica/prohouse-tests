@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.action_chains import ActionChains
 
 from GeneralPage import GeneralPage
 
@@ -48,6 +47,15 @@ class RegistrationPage(GeneralPage):
 
     def password_again_field_error_message(self):
         return WebDriverWait(self.browser, 5).until(EC.visibility_of_element_located((By.XPATH, "//input[@id='confirmPassword']/following-sibling::small[@class='text-danger']")))
+
+    def last_name_error_message(self):
+        return WebDriverWait(self.browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@id='lastName']/following-sibling::small[@class='text-danger']")))
+
+    def first_name_error_message(self):
+        return WebDriverWait(self.browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@id='firstName']/following-sibling::small[@class='text-danger']")))
+
+    def phone_error_message(self):
+        return WebDriverWait(self.browser, 5).until(EC.presence_of_element_located((By.XPATH, "//input[@id='phoneNumber']/following-sibling::small[@class='text-danger']")))
 
     def fill_registration_form(self, lastname, firstname, phone, email, same_email, password, same_password):
         self.last_name_input().send_keys(lastname)
