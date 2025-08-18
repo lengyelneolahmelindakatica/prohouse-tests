@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2025-08-15 19:26:51",
+    "sprint": "Sprint-1",
+    "project": "Moovsmart",
+    "total_tests": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "success_rate": 100.0,
+    "duration_seconds": 14.09,
+    "exit_status": 0
+  },
+  {
+    "timestamp": "2025-08-15 19:27:41",
+    "sprint": "Sprint-1",
+    "project": "Moovsmart",
+    "total_tests": 7,
+    "passed": 6,
+    "failed": 1,
+    "skipped": 0,
+    "success_rate": 85.71,
+    "duration_seconds": 25.02,
+    "exit_status": 2
+  }
+]
