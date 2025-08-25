@@ -96,7 +96,7 @@ class TestVisitorNavigation:
         rent_found = any(indicator.lower() in rent_content.lower() for indicator in rent_indicators)
 
         # Ellenőrzések
-        assert buy_url != rent_url, "Buy and Rent pages should have different URLs"
+        assert buy_url != rent_url, "Buy and Rent Sprint 1 should have different URLs"
 
         if buy_found:
             print("Buy page shows sale-related content")
@@ -185,7 +185,7 @@ class TestVisitorNavigation:
     def test_logo_always_returns_home(self, main_page, base_url):
         """Logo mindig visszavisz a főoldalra bármely oldalról"""
 
-        # Test from different pages
+        # Test from different Sprint 1
         test_navigations = [
             ("Buy page", lambda: main_page.buy_button().click()),
             ("Rent page", lambda: main_page.rent_button().click()),
